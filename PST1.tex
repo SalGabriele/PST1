@@ -1,0 +1,112 @@
+\documentclass{VUMIFPSkursinis}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{blindtext}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{scrextend}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xparse}
+%\usepackage{tabularx}
+\usepackage{ltxtable}
+\usepackage{tabu}
+\usepackage{xcolor}
+
+% Titulinio aprašas
+\university{Vilniaus universitetas}
+\faculty{Matematikos ir informatikos fakultetas}
+\department{Programų sistemų katedra} %instituuuuta
+\papertype{Testavimo atvejai ir rasti defektai}
+\title{Programos ,,Christmas Time Calculator" testavimas}
+\status{3 kurso 5 grupės studentė}
+\author{Gabrielė Saletytė}
+\supervisor{dr. Vytautas Valaitis}
+\date{Vilnius – \the\year}
+
+% Nustatymai
+% \setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
+%\bibliography{bibliography}
+\input{customCommands}
+
+%==========================================================================> Dokumento pradžia <========================================================================
+\begin{document}
+    \newenvironment{innerParagraph}[1][0.5cm]{\begin{adjustwidth}{#1}{}}{\end{adjustwidth}}
+        
+    \pagenumbering{gobble}
+    \maketitle
+    \tableofcontents
+	\pagenumbering{arabic}
+	
+	\sectionnonum{Anotacija} \label{anotacija}
+		Šiame laboratoriniame darbe bus testuojama „Christmas Time Calculator“ programa.
+		Ši programėlė skirstoma į dvi dalis - pagrindinę, kurią sudaro laiko iki Kalėdų skaičiuoklė, bei papildomą - 
+		kurią sudaro kalėdinis žaidimas.
+		Sudarant testavimo atvejus bus atsižvelgtą į atskirus dalių funkcionalumus.
+		Ši programa rašyta 2016 m. rugsėjo - gruodžio mėn. ir atsiskaityta kaip taikomojo objektinio programavimo užduotis.
+		Programa rašyta C# kalba.
+
+		Pradžioje bus apibrėžti reikalavimai programai, pagal kuriuos buvo atliekama užduotis.
+		Vėliau bus pateikiami testavimo atvejai ir sudaryta atsekamumo matrica.
+		Laboratorinio darbo pabaigoje bus pateiktas defektų sąrašas ir sudarytas terminų žodynėlis.
+	\sectionnonum{Įvadas} \label{ivadas}
+		\subsection*{Testuojamos programos pavadinimas} \label{ivadas_psPavadinimas}
+			,,Christmas Time Calculator''.
+		\subsection*{Darbo tikslas} \label{ivadas_darboTikslas}
+			Panaudojant testavimo atvejų sudarymo strategiją rankiniu būdu, 
+			ištestuoti „Christmas Time Calculator“ programą, sudaryti testavimo atvejus bei defektų sąrašus.
+		\subsection*{Darbo pagrindas} \label{ivadas_pagrindas}
+			Dokumentas parengtas kaip programų sistemų testavimo laboratorinis darbas.
+	
+	\section{Reikalavimai programai ,,Christmas Time Calculator"} \label{reikalavimai}
+		Šiame skyriuje pateikiami reikalavimai, į kuriuos buvo atsižvelgiama rašant „Christmas Time Calculator“ programą.
+		Reikalavimai pateikiami bendrai, neišskiriant atskirų programos dalių funkcionalumų.
+		\begin{enumerate}[label=\textbf{R\arabic*}]
+			\item Pagrindiniame programos lange turi būti galimybė keisti „Until Christmas Left“ teksto spalvą paspaudus ant šio užrašo.
+			Pasirinkta spalva turi išlikti išjungus programą.
+			\item Pagrindiniame lange pasikeitus mėnesių, dienų, valandų, minučių ar sekundžių skaičiui į 1, 
+			šalia esantis žodis iš daugiskaitos turi
+			pasikeisti į vienaskaitą.
+			\item Likus kiekvienai minutei mažiau (t. y. programa rodo 0 ties sekundžių skiltimi), naujame lange įsijungia kalėdinis žaidimas.
+			\item Keičiant pagrindinės dalies dydį, visi laukai proporcingai pakeičia savo dydį. 
+			Kalėdinio žaidimo lango dydžio keisti nėra galimybės.
+			\item Esant įjungtam kalėdiniam žaidimui ir vėl atėjus laikui įjungti jį, žaidimas neįsijungia iš naujo ir 
+			nėra atidaromas papildomas langas su nauju žaidimu.
+			\item Žaidimo metu su kepurėle pagavus dovanėlę taškai padidėja vienu vienetu.
+			Pasiekus naują rekordinį taškų kiekį, skaičius ties „High Score“ nuolat atnaujinamas į dabar surinktų taškų kiekį.
+			\item Kalėdinės kepurėlės judėjimas pagrįstas rodyklių bei klavišų „A“ ir „D“ valdymu.
+			\item Dovanėlei nukritus iš matomo lauko, prarandama viena gyvybė tai pašalinus vieną iš 3 dovanėlių ikonų.
+			\item Krentančios kalėdinės dovanėlės turi būti pilnai matomos žaidimo erdvėje. 
+			Dovanėlės negali kristi už matymo ribų ir negali matytis tik dalinai.
+			\item Ilgėjant žaidimo laikui, dovanėlių bei kalėdinės kepurėlės judėjimo greičiai proporcingai didėja.
+			\item Praradus visas gyvybes, žaidimas turi išsijungti po 5 sekundžių.
+			Prieš išsijungiant ekrane turi pasirodyti „Game Over“ užrašas.
+			Jei žaidimo metu pasiektas naujas rekordas, vietoj „Game Over“ užrašo turi pasirodyti „New High Score!“ užrašas. 
+		\end{enumerate}
+	\section{Programos ,,Christmas Time Calculator" testavimas} \label{testavimas}
+		Šiame skyriuje bus pateikiami testavimo atvejai bei reikalavimų - testavio atvejų atsekamumo matrica.
+		\subsection{Testavimo atvejai} \label{testavimoAtvejai}
+			Šioje dalyje pateikiamos lentelės su atskirais testavimo atvejais.
+			\subsubsection{Pagrindinės dalies testavimo atvejai} \label{pagrindinesDaliesTA}
+				Toliau pateikiami testavimo atvejai, apimantys tik pagrindinės dalies funkcionalumą.
+			\subsubsection{Papildomos dalies testavimo atvejai} \label{papildomosDaliesTA}
+				Toliau pateikiami testavimo atvejai, apimantys tik papildomos dalies („Christmas Game“) funkcionalumą.
+		\subsection{Reikalavimų - testavimo atvejų atsekamumo matrica} \label{atsekamumo matrica}
+			Toliau pateikiama reikalavimų - testavomo atvejų atsekamumo matrica.
+	\section{Defektų sąrašas} \label{defektai}
+
+	\sectionnonum{Išvados} \label{isvados}
+	\sectionnonum{Rezultatai} \label{rezultatai}
+\end{document}

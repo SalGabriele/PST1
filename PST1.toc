@@ -1,0 +1,25 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Anotacija}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Įvadas}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Reikalavimai programai ,,Christmas Time Calculator"}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.}Programos ,,Christmas Time Calculator" testavimas}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.}Testavimo atvejai}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.1.}Pagrindinės dalies testavimo atvejai}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.1.2.}Papildomos dalies testavimo atvejai}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.}Reikalavimų - testavimo atvejų atsekamumo matrica}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.}Defektų sąrašas}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Išvados}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Rezultatai}{7}
