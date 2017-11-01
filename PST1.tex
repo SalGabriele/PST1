@@ -28,7 +28,7 @@
 % Titulinio aprašas
 \university{Vilniaus universitetas}
 \faculty{Matematikos ir informatikos fakultetas}
-\department{Programų sistemų katedra} %instituuuuta
+\department{Matematikos ir informatikos institutas}
 \papertype{Testavimo atvejai ir rasti defektai}
 \title{Programos ,,Christmas Time Calculator" testavimas}
 \status{3 kurso 5 grupės studentė}
@@ -38,7 +38,7 @@
 
 % Nustatymai
 % \setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
-%\bibliography{bibliography}
+\bibliography{bibliography}
 \input{customCommands}
 
 %==========================================================================> Dokumento pradžia <========================================================================
@@ -56,7 +56,7 @@
 		kurią sudaro kalėdinis žaidimas.
 		Sudarant testavimo atvejus bus atsižvelgtą į atskirus dalių funkcionalumus.
 		Ši programa rašyta 2016 m. rugsėjo - gruodžio mėn. ir atsiskaityta kaip taikomojo objektinio programavimo užduotis.
-		Programa rašyta C# kalba.
+		Programa rašyta C\# kalba.
 
 		Pradžioje bus apibrėžti reikalavimai programai, pagal kuriuos buvo atliekama užduotis.
 		Vėliau bus pateikiami testavimo atvejai ir sudaryta atsekamumo matrica.
@@ -100,13 +100,184 @@
 		\subsection{Testavimo atvejai} \label{testavimoAtvejai}
 			Šioje dalyje pateikiamos lentelės su atskirais testavimo atvejais.
 			\subsubsection{Pagrindinės dalies testavimo atvejai} \label{pagrindinesDaliesTA}
-				Toliau pateikiami testavimo atvejai, apimantys tik pagrindinės dalies funkcionalumą.
+				Toliau 1 - 10 lentelėse pateikiami testavimo atvejai, apimantys pagrindinės dalies funkcionalumą.
+				\begin{table}[H]
+					\centering
+					\caption{Užrašo „Until Christmas Left“ teksto spalvos pakeitimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0101}			
+					\label{fig:TA0101}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Užrašo „Until Christmas Left“ teksto spalvos išsaugojimo}
+					\includegraphics[width=\textwidth]{TA/TA0102}			
+					\label{fig:TA0102}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Mėnesio laukelio teisingumo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0103}			
+					\label{fig:TA0103}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Dienų laukelio teisingumo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0104}			
+					\label{fig:TA0104}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Valandų laukelio teisingumo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0105}			
+					\label{fig:TA0105}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Minučių laukelio teisingumo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0106}			
+					\label{fig:TA0106}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Sekundžių laukelio teisingumo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0107}			
+					\label{fig:TA0107}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Žaidimo paleidimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0108}			
+					\label{fig:TA0108}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Pagrindinio lango dydžio keitimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0109}			
+					\label{fig:TA0109}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Laiko pakartotinam žaidimo paleidimui testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0110}			
+					\label{fig:TA0110}
+				\end{table}
 			\subsubsection{Papildomos dalies testavimo atvejai} \label{papildomosDaliesTA}
-				Toliau pateikiami testavimo atvejai, apimantys tik papildomos dalies („Christmas Game“) funkcionalumą.
+				Toliau 11 - 20 lentelėse pateikiami testavimo atvejai, apimantys papildomos dalies („Christmas Game“) funkcionalumą.
+				\begin{table}[H]
+					\centering
+					\caption{Papildomo lango dydžio keitimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0201}			
+					\label{fig:TA0201}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{„High Score“ laukelio testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0202}			
+					\label{fig:TA0202}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Taškų skaičiavimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0203}			
+					\label{fig:TA0203}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Žaidimo valdymo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0204}			
+					\label{fig:TA0204}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Gyvybių skaičiavimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0205}			
+					\label{fig:TA0205}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Dovanėlių atvaizdavimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0206}			
+					\label{fig:TA0206}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Dovanėlių kritimo greičio didėjimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0207}			
+					\label{fig:TA0207}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Kalėdinės kepurėlės greičio didėjimo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0208}			
+					\label{fig:TA0208}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Žaidimo pralaimėjimo be pasiekto rekordo testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0209}			
+					\label{fig:TA0209}
+				\end{table}
+				\begin{table}[H]
+					\centering
+					\caption{Žaidimo pralaimėjimo su pasiektu rekordu testavimo atvejis}
+					\includegraphics[width=\textwidth]{TA/TA0210}			
+					\label{fig:TA0210}
+				\end{table}
 		\subsection{Reikalavimų - testavimo atvejų atsekamumo matrica} \label{atsekamumo matrica}
-			Toliau pateikiama reikalavimų - testavomo atvejų atsekamumo matrica.
+			Toliau 21 lentelėje pateikiama reikalavimų - testavimo atvejų atsekamumo matrica.
+			\begin{table}[H]
+				\centering
+				\caption{Reikalavimų - testavimo atvejų atsekamumo matrica}
+				\includegraphics[width=\textwidth]{TA/AtsekamumoMatrica}			
+				\label{fig:AtsekamumoMatrica}
+			\end{table}
 	\section{Defektų sąrašas} \label{defektai}
-
-	\sectionnonum{Išvados} \label{isvados}
+		Šiame skyriuje pateikiamas defektų sąrašas 22 lentelėje. Taip pat pateikiami defektų tipai:
+			\begin{itemize}
+				\item \textbf{Kritinis} - pažeistas pagrindinis funkcionalumas. 
+				Defektą būtina taisyti prieš leidžiant šia programa naudotis kitiems.
+				\item \textbf{Svarbus} - pažeistas šalutinis funkcionalumas. 
+				Programa galima naudotis, tačiau šis funkcionalumas dalinai trikdys veiklą.
+				\item \textbf{Neutralus} - kosmetinis ar mažai pastebimas defektas.
+				Programa galima naudotis be pažeisto funkcionalumo.
+			\end{itemize}
+			\begin{table}[H]
+				\centering
+				\caption{Defektų sąrašas}
+				\includegraphics[width=\textwidth]{TA/Defektai}			
+				\label{fig:DefektuSarasas}
+			\end{table}
 	\sectionnonum{Rezultatai} \label{rezultatai}
+			Programos „Christmas Time Calculator“ testavimo metu buvo sudaryta 20 testavimo atvejų. 
+			10 iš jų skirti pagrindinės programos dalies funkcionalumui patikrinti, kiti 10 - papildomos dalies, t. y. kalėdinio žaidimo
+			funkcionalumui patikrinti.
+
+			Pagrindinėje dalyje buvo aptikti šeši neutralūs defektai, nepažeidžiantys programos fukcionalumo.
+
+			Papildomoje „Christmas Game“ dalyje buvo aptikti šeši defektai. Vienas iš jų neutralus, keturi svarbūs ir vienas kritinis.
+	\sectionnonum{Išvados} \label{isvados}	
+			
+			Atlikus programos „Christmas Time Calculator“ testavimą paaiškėjo, kad pagrindinė šios programos dalies funkcionalumas 
+			veikia su keliais neutraliais kosmetiniais defektais. Tačiau šia programa negalima leisti toliau naudotis kitiems asmenims,
+			kol nebus ištaisytas kritinis defektas. Šis defektas neleidžia pilnai žaisti kalėdinio žaidimo, kadangi dovanoms krentant greičiau
+			nėra galimybės jų pagauti su lėtai judančia kalėdine kepure. Taip pat norint, kad žaidimo eiga vyktų sklandžiau rekuomenduojama
+			ištaisyti svarbius defektus.
+	
+	\sectionnonum{Priedai} \label{priedai}
+		Šiame skyriuje pateikiami priedai, padedantys sklandžiau peržvelgti šį dokumentą.
+		\subsection*{Terminų žodynėlis} \label{zodynas}
+			\begin{itemize}
+				\item \textbf{„Christmas Time Calculator“} - programa skaičiuojanti laiko likutį iki artimiausių Kalėdų, 
+				pateikiant tikslų mėnesių, dienų, valandų, minučių ir sekundžių skaičių.
+				\item \textbf{„Christmas Game“} - papildomas programos „Christmas Time Calculator“ langas, pasirodantis likus kiekvienai
+				minutei mažiau iki Kalėdų (t. y. kai sekundžių rodiklis vaizduoja skaičių „0“). Šią dalį sudaro kalėdinis žaidimas,
+				kurio veikimo principas yra valdant lango apačioje esančią kalėdinę kepurę surinkti kuo daugiau krentančių dovanų.
+				\item \textbf{Pagrindinė dalis} - pirminis programos „Christmas Time Calculator“ langas.
+				\item \textbf{Papildoma dalis} - „Christmas Game“ dalies langas.
+				\item \textbf{Kalėdinis žaidimas} - žaidimas, atsiveriantis ikus kiekvienai minutei mažiau iki Kalėdų.
+				\item \textbf{„High Score“ laukas} - papildomos dalies laukas, kuriame pateikiamas disžiausias žaidime surinktų taškų skaičius.
+				\item \textbf{Kalėdinė kepurė} - kalėdinio žaidimo apačioje esanti į šonus valdoma kalėdinės kepurės formos ikona.
+				\item \textbf{Dovana} - kalėdiniame žaidime krentantčios ikonos, kurias palietus su kalėdine kepure pridedamas vienas taškas
+				ir jai nukrentant už ribų panaikinama viena gyvybė. 
+			\end{itemize}
 \end{document}
